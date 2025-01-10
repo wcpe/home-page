@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import {RouterLink, RouterView} from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import Footer from './components/Footer.vue';
-
 </script>
 
 <template>
   <header>
 
-    <img alt="head" class="head" src="@/assets/head.jpg" width="125" height="125" />
+    <img alt="head" class="head" src="@/assets/head.jpg" width="125" height="125"/>
 
     <div class="wrapper">
-      <HelloWorld />
+      <HelloWorld/>
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -19,12 +18,11 @@ import Footer from './components/Footer.vue';
       </nav>
     </div>
   </header>
-  <transition name="slide">
-    <RouterView />
+  <transition name="slide" class="router-view">
+    <RouterView/>
   </transition>
-
   <div>
-    <Footer />
+    <Footer/>
   </div>
 </template>
 
@@ -43,7 +41,6 @@ header {
   margin-right: 5%;
   transition: all 0.3s;
 }
-
 
 
 .head:hover {
@@ -112,10 +109,13 @@ nav a:first-of-type {
     left: 50%;
     width: 200px;
     height: 200px;
-    margin-top: -100px;
     margin-left: -100px;
   }
 
+  .router-view {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 
@@ -125,7 +125,7 @@ nav a:first-of-type {
 }
 
 .slide-enter-from {
-  transform: translateX(150%);
+  transform: translateX(100%);
 }
 
 .slide-enter-to {
