@@ -1,6 +1,4 @@
-<script setup lang="ts">
-
-
+<script lang="ts">
 
 </script>
 
@@ -16,48 +14,23 @@
         love - bash
       </div>
     </div>
-
-    <!-- 终端内文字 -->
     <div class="terminal-body">
       <span style="color: rgb(0, 190, 0);">root@WCPE</span>
       <span style="color: blue;"> ~ </span>
-      <span style="color: rgb(39, 39, 39);">cat /me.txt</span>
-      <div class="terminal-output">
-        <p>
-          <span style="color: green;">0x40FF</span> <span style="color: gray;">SYSTEM_FAILURE</span> <span
-            style="color: green;">::</span> <span style="color: gray;">CORE_MODULE</span>
-        </p>
-        <p>
-          <span style="color: green;">0x8801</span> <span style="color: gray;">MEM_ACCESS_ERR</span> <span
-            style="color: green;">[</span> <span style="color: gray;">ADDR 0x1234</span> <span
-            style="color: green;">]</span> <span style="color: gray;">SEGMENT_FAULT</span>
-        </p>
-        <p>
-          <span style="color: green;">0x9E5A</span> <span style="color: gray;">LINK_DISRUPTION</span> <span
-            style="color: green;">|</span> <span style="color: gray;">NETWORK_NODE</span> <span
-            style="color: gray;">DOWN</span>
-        </p>
-        <p>
-          <span style="color: green;">0xC133</span> <span style="color: gray;">DRIVER_MISMATCH</span> <span
-            style="color: green;">-</span> <span style="color: gray;">HARDWARE</span> <span
-            style="color: gray;">INCOMPATIBLE</span>
-        </p>
-        <p>
-          <span style="color: green;">0x1F00</span> <span style="color: gray;">POWER_IRREGULARITY</span> <span
-            style="color: green;">+++</span> <span style="color: gray;">---</span>
-        </p>
-      </div>
-
-
+      <span style="color: rgb(39, 39, 39);">./links.sh</span>
+      <p>我的其他站点：</p>
+      <ul class="ul">
+        <li><a href="https://blog.wcpe.top/">博客</a></li>
+        <li><a href="https://git.wcpe.top/">代码</a></li>
+        <li><a href="https://github.com/wcpe/">GitHub</a></li>
+      </ul>
       <span style="color: rgb(0, 190, 0);">root@WCPE</span>
-      <span style="color: blue;"> ~ </span>
-      <span style="color: rgb(39, 39, 39);">sudo rm -rf /过去的自己/*</span>
+      <span style="color: blue;"> ~ </span> <span id="typing-effect">shutdown</span>
     </div>
   </div>
 </template>
 
 <style scoped>
-
 .terminal-window {
   width: 100%;
   height: 100%;
@@ -110,7 +83,34 @@
 .terminal-body {
   padding: 10px;
 }
-.terminal-output {
-  text-align: center;
+
+/* 新增的ul样式 */
+.ul {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+  border-radius: 10px;
+  background-image: linear-gradient(to left, rgba(74, 76, 77, 0.055), rgba(18, 219, 192, 0.2));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
+.ul li {
+  border-radius: 5px;
+  transition: background-color 0.8s ease;
+}
+
+.ul li a {
+  color: rgb(32, 167, 88);
+  text-decoration: none;
+}
+
+.ul li:hover {
+  background-color: #b2d3af;
+}
+
 </style>
